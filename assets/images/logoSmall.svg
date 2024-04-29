@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="17.029451mm"
+   height="7.8841438mm"
+   viewBox="0 0 64.363282 29.798338"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="logoSmall.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="10.076272"
+     inkscape:cy="14.318912"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1213"
+     showguides="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Text"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-129.58594,-92.908203)"
+     style="display:none">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:26.6667px;font-family:Nexa;-inkscape-font-specification:'Nexa, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"
+       x="100.41704"
+       y="88.945854"
+       id="text113"
+       inkscape:label="4S Solutions"><tspan
+         sodipodi:role="line"
+         id="tspan111"
+         x="100.41704"
+         y="88.945854"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:26.6667px;font-family:Nexa;-inkscape-font-specification:'Nexa, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"
+         dy="11">4S</tspan><tspan
+         sodipodi:role="line"
+         x="100.41704"
+         y="122.27923"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:26.6667px;font-family:Nexa;-inkscape-font-specification:'Nexa, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"
+         id="tspan165">Solutions </tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Shop"
+     transform="translate(-129.58594,-92.908203)"
+     style="display:none;fill:#ffffff">
+    <g
+       id="g908"
+       inkscape:label="Building"
+       style="display:inline;fill:#ffffff">
+      <path
+         id="rect533"
+         style="fill:#ffffff;stroke-width:0.550527"
+         inkscape:label="right wall"
+         d="m 95.273438,81.841797 v 40.863283 h 3.677734 V 80.855469 Z"
+         transform="matrix(-1,0,0,1,323.53516,0)" />
+      <path
+         id="path902"
+         style="fill:#ffffff;stroke-width:0.550527"
+         inkscape:label="left wall"
+         d="m 95.273438,81.841797 v 40.863283 h 3.677734 V 80.855469 Z" />
+      <path
+         id="path685"
+         style="display:inline;fill:#ffffff;stroke-width:0.907341"
+         inkscape:label="roof"
+         d="m 161.76758,58.908203 7.10156,1.904297 79.97461,21.427735 v 3.808593 L 161.76758,62.714844 74.691409,86.048828 V 82.240235 L 154.66602,60.8125 Z"
+         transform="matrix(-1,0,0,1,323.53516,0)" />
+    </g>
+  </g>
+  <g
+     inkscape:label="Text small"
+     inkscape:groupmode="layer"
+     id="g1213"
+     transform="translate(-129.58594,-92.908203)"
+     style="display:inline;fill:#ffffff">
+    <g
+       aria-label="4S "
+       id="text1211"
+       style="font-weight:900;font-size:26.6667px;font-family:Nexa;-inkscape-font-specification:'Nexa, Heavy'"
+       inkscape:label="4S Solutions">
+      <path
+         d="m 160.66092,115.2384 v 3.68001 h -2.05334 v 3.36 h -4.24 v -3.36 h -9.86668 l -0.34667,-3.84001 10.02668,-11.46668 h 4.42667 v 11.62668 z m -6.26668,-6.40001 -5.6,6.45335 h 5.6 z"
+         id="path2698" />
+      <path
+         d="m 170.74091,122.70508 q -2.29334,0 -4.42667,-0.69334 -2.10667,-0.69333 -3.65334,-1.94666 l 2.26667,-3.17334 q 2.48,1.94667 5.78667,1.94667 1.65334,0 2.61334,-0.56 0.98667,-0.56 0.98667,-1.52001 0,-0.90666 -0.90667,-1.41333 -0.90667,-0.50667 -2.88001,-0.72 -3.81333,-0.42667 -5.6,-1.78667 -1.76,-1.36 -1.76,-3.89334 0,-1.70667 0.96,-3.01334 0.96,-1.30666 2.69333,-2.02666 1.73334,-0.72001 4.00001,-0.72001 1.94667,0 3.78667,0.56001 1.86667,0.56 3.28,1.57333 l -2.05333,3.06667 q -2.18667,-1.52 -4.82667,-1.52 -1.62667,0 -2.61334,0.53333 -0.96,0.53334 -0.96,1.44 0,0.88001 0.82667,1.36001 0.85333,0.48 2.82667,0.72 3.78667,0.42666 5.65334,1.89333 1.86667,1.44001 1.86667,3.97334 0,1.76 -0.98667,3.12001 -0.98667,1.33333 -2.77334,2.08 -1.78667,0.72 -4.10667,0.72 z"
+         id="path2700" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g1223"
+     inkscape:label="Shop small"
+     transform="translate(-129.58594,-92.908203)"
+     style="display:inline;fill:#ffffff">
+    <g
+       id="g1221"
+       inkscape:label="Building"
+       style="display:inline;fill:#ffffff"
+       transform="translate(0,22.329092)">
+      <path
+         id="path1344"
+         style="display:inline;fill:#ffffff;stroke-width:0.550527"
+         inkscape:label="right wall"
+         d="m 181.38086,80.855962 v 19.521488 h 3.67774 V 81.84229 Z" />
+      <path
+         id="path1341"
+         style="fill:#ffffff;stroke-width:0.550527"
+         inkscape:label="left wall"
+         d="m 142.1543,80.855962 -3.67773,0.986328 v 18.53516 h 3.67773 z" />
+      <path
+         id="path1376"
+         style="display:inline;fill:#ffffff;stroke-width:0.907341"
+         inkscape:label="roof"
+         d="M 87.076172,34 79.97461,35.904297 54.894531,42.625 v 3.804688 l 32.181641,-8.623047 32.181638,8.623047 V 42.625 L 94.177735,35.904297 Z"
+         transform="translate(74.69141,36.579111)" />
+    </g>
+  </g>
+</svg>
