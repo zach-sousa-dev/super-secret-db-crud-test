@@ -3,7 +3,7 @@
  * @version     1
  */
 
-var reqURL = "http://localhost/super-secret-db-crud-test/jquery-example/php/example-query.php";     //the URL of the php server
+var reqURL = "http://localhost/super-secret-db-crud-test/jquery-example/private/php/example-query.php";     //the URL of the php server
 
 //This code uses standard js to verify that the 
 //js has been successfuly loaded
