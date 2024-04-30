@@ -3,4 +3,4 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "classicmodels";  //I'm just using Dave Slemon's example since it was convienent
+$dbname = "classicmodels";  //I'm just using Dave Slemon's example since it was convenient
