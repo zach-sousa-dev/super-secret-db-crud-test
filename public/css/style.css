@@ -1,0 +1,61 @@
+:root {
+    --main-background-color: white;
+    --main-form-color: rgb(240, 240, 240);
+    --bg-logo:  url("../../assets/images/logo_bg.svg");
+    --form-width: 415px;
+    --nav-item-color: white;
+    --nav-color: rgb(59, 59, 59);
+    --nav-item-font-size: 3rem;
+}
+
+
+body {
+    background-color: var(--main-background-color);
+    margin: 0px 0px 0px 0px;
+}
+
+#background {
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--bg-logo);
+    background-size: 200px;
+    animation: pan 120s linear infinite;
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes pan {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+#container {
+    max-width: var(--form-width);
+    height: 100vh;
+    background-color: var(--main-form-color);
+    margin: auto;
+}
+
+#main-nav {
+    max-width: var(--form-width);
+    text-align: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: var(--nav-color);
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: var(--nav-item-color);
+}
+
+#main-nav a span {
+    font-size: var(--nav-item-font-size);
+}
