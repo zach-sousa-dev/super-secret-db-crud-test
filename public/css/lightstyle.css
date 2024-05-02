@@ -1,0 +1,10 @@
+:root {
+    --main-background-color: white;
+    --main-form-color: rgb(240, 240, 240);
+    --bg-logo:  url("../../assets/images/logo_bg.svg");
+    --form-width: 415px;
+    --nav-item-color: white;
+    --nav-color: rgb(59, 59, 59);
+    --nav-item-font-size: 3rem;
+    --nav-border-color: rgb(41, 41, 41);
+}
