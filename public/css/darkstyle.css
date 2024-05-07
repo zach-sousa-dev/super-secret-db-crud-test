@@ -8,4 +8,6 @@
     --nav-item-font-size: 3rem;
     --nav-border-color: rgb(255, 255, 255);
     --main-font-color: white;
+    --item-header-bg-color: rgb(34, 34, 34);
+    --item-details-bg-color: rgb(77, 77, 77);
 }

@@ -1,6 +1,6 @@
 :root {
     --main-background-color: white;
-    --main-form-color: rgb(240, 240, 240);
+    --main-form-color: rgb(206, 206, 206);
     --bg-logo:  url("../../assets/images/logo_bg.svg");
     --form-width: 415px;
     --nav-item-color: white;
@@ -8,4 +8,6 @@
     --nav-item-font-size: 3rem;
     --nav-border-color: rgb(41, 41, 41);
     --main-font-color: black;
+    --item-header-bg-color: rgb(255, 255, 255);
+    --item-details-bg-color: rgb(149, 149, 149);
 }

@@ -1,3 +1,7 @@
+:root {
+    --item-header-size: 2rem;
+}
+
 body {
     background-color: var(--main-background-color);
     margin: 0px 0px 0px 0px;
@@ -59,4 +63,29 @@ body {
 
 #main-nav a span {
     font-size: var(--nav-item-font-size);
+}
+
+#items-container {
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+    /*border-top: 2px solid var(--main-font-color);*/
+    /*border-bottom: 2px solid var(--main-font-color);*/
+    margin: 0px 0px 40px 0px;
+}
+
+.item-name {
+    width: 100%;
+    /*border-bottom: 2px solid var(--main-font-color);*/
+    font-size: var(--item-header-size);
+    background-color: var(--item-header-bg-color);
+}
+
+.item-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--item-details-bg-color);
 }
