@@ -15,7 +15,7 @@ body {
     background-image: var(--bg-logo);
     background-size: 200px;
     animation: pan 120s linear infinite;
-    position: absolute;
+    position: fixed;
     z-index: -1;
 }
 
@@ -39,7 +39,7 @@ body {
 
 #container {
     max-width: var(--form-width);
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--main-form-color);
     margin: auto;
 }
@@ -88,4 +88,27 @@ body {
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--item-details-bg-color);
+}
+
+#page-controller-container {
+    width: var(--form-width);
+    text-align: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: var(--nav-color);
+
+    border-top: 2px solid var(--nav-border-color);
+    position: fixed;
+    bottom: 0px;
+}
+
+#page-controller-container a {
+    text-decoration: none;
+    color: var(--nav-item-color);
+}
+
+#page-controller-container a span {
+    font-size: var(--nav-item-font-size);
 }
