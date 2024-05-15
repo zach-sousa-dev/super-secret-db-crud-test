@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Inventory</title>
+        <title>Create Item</title>
 
         <link href="./css/style.css" rel="stylesheet" type="text/css"/>
         <link id="css" href="./css/darkstyle.css" rel="stylesheet" type="text/css"/>
@@ -12,7 +12,6 @@
         
         <script defer src="./js/toggle-theme.js"></script>
         <script defer src="./js/not-implemented.js"></script>
-        <script defer src="./js/page-controller.js"></script>
 
         <link rel="shortcut icon" href="../assets/images/logoIcon.svg" type="image/x-icon">
     </head>
@@ -37,33 +36,6 @@
                     <span class="material-symbols-outlined">account_circle</span>
                 </a>
             </nav>
-
-            <div id="items-container">
-                <!--Items go here-->
-            </div>
-
-            <div id="page-controller-container" class="no-select">
-                <a id="prev-button" class="pointer" title="Go to the previous page." onclick="backPressed()">
-                    <span class="material-symbols-outlined">arrow_back_ios</span>
-                </a>
-
-                <a id="top-button" class="pointer" href="#top" title="Go to the top of the current page.">
-                    <span class="material-symbols-outlined">stat_3</span>
-                </a>
-
-                <a id="next-button" class="pointer" title="Go to the next page." onclick="nextPressed()">
-                    <span class="material-symbols-outlined">arrow_forward_ios</span>
-                </a>
-
-                <select name="items-per-page" id="items-per-page-dropdown" title="Choose how many items appear per page." onchange="reload()">
-                    <option value="3">3 items</option>
-                    <option value="5">5 items</option>
-                    <option value="10">10 items</option>
-                    <option value="20">20 items</option>
-                    <option value="40">40 items</option>
-                    <option value="all">All items</option>
-                </select>
-            </div>
             
         </div>
         
