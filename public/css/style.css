@@ -76,11 +76,22 @@ body {
     margin: 0px 0px 40px 0px;
 }
 
-.item-name {
+.item-name, .item-param {
     width: 100%;
     /*border-bottom: 2px solid var(--main-font-color);*/
     font-size: var(--item-header-size);
     background-color: var(--item-header-bg-color);
+}
+
+.item-param {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.item-param input[type=text], .item-param input[type=text]:focus {
+    background-color: var(--item-details-bg-color);
+    border: none;
 }
 
 .item-details {
