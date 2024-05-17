@@ -70,6 +70,7 @@ body {
 
 #items-container {
     width: 100%;
+    padding: /*do*/
 }
 
 .item {
@@ -130,6 +131,10 @@ body {
     content: attr(data-text);
     color: var(--inactive-text-color);
     font-style: italic;
+}
+
+[contentEditable=true]:focus {
+    cursor: text;
 }
 /**END CUSTOM TEXT FIELDS**/
 
