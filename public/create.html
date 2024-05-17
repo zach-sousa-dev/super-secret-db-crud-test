@@ -12,6 +12,7 @@
         
         <script defer src="./js/toggle-theme.js"></script>
         <script defer src="./js/not-implemented.js"></script>
+        <script defer src="./js/text-field-anti-format.js"></script>
 
         <link rel="shortcut icon" href="../assets/images/logoIcon.svg" type="image/x-icon">
     </head>
@@ -37,29 +38,83 @@
                 </a>
             </nav>
 
+            
             <div id="item-param-container">
 
+                <!--Name-->
                 <div class="item-param">
                     <div class="item-param-name">
-                        Name:
+                        <span class="material-symbols-outlined">info</span> Name:
                     </div>
-                    <input type="text" id="name" name="name" placeholder="Type here..."/>
+
+                    <div class="item-param-input" id="item-name" contenteditable="true" data-text="Type a name here..."></div>
                 </div>
 
+                <!--Quantity-->
                 <div class="item-param">
                     <div class="item-param-name">
-                        Quantity:
+                        <span class="material-symbols-outlined">info</span> Quantity:
                     </div>
-                    <input type="text" id="qty" name="qty" placeholder="Type here..."/>
+
+                    <div class="item-param-input" id="item-qty" contenteditable="true" data-text="Type a number here..."></div>
                 </div>
 
+                <!--Notice Quantity-->
                 <div class="item-param">
                     <div class="item-param-name">
-                        Notice quantity:
+                        <span class="material-symbols-outlined">info</span> Notice quantity:
                     </div>
-                    <input type="text" id="notice_qty" name="notice_qty" placeholder="Type here..."/>
+
+                    <div class="item-param-input" id="item-notice-qty" contenteditable="true" data-text="Type a number here..."></div>
                 </div>
 
+                <!--Unit-->
+                <div class="item-param">
+                    <div class="item-param-name">
+                        <span class="material-symbols-outlined">info</span> Unit:
+                    </div>
+
+                    <div class="item-param-input" id="item-unit" contenteditable="true" data-text="Type a unit here..."></div>
+                </div>
+
+                <!--Value-->
+                <div class="item-param">
+                    <div class="item-param-name">
+                        <span class="material-symbols-outlined">info</span> Dollar value:
+                    </div>
+
+                    <div class="item-param-input" id="item-value" contenteditable="true" data-text="Type a number here..."></div>
+                </div>
+
+                <!--Available-->
+                <div class="item-param">
+                    <div class="item-param-name">
+                        <span class="material-symbols-outlined">info</span> Available:
+                    </div>
+
+                    <input type="checkbox" id="item-available" name="available" />
+                </div>
+
+                <!--Notes-->
+                <div class="item-param no-flex">
+                    <div class="item-param-name">
+                        <span class="material-symbols-outlined">info</span> Notes:
+                    </div>
+
+                    <div class="item-param-input-tall" id="item-notes" contenteditable="true" data-text="Type notes here..."></div>
+                </div>
+
+            </div>
+
+
+            <div id="page-controller-container" class="no-select">
+                <a id="cancel-button" class="pointer" href="list.html" title="Do not create the item and return to the inventory." onclick="backPressed()">
+                    <span class="material-symbols-outlined">cancel</span>
+                </a>
+
+                <a id="confirm-button" class="pointer" title="Create the item!">
+                    <span class="material-symbols-outlined">add_circle</span>
+                </a>
             </div>
             
         </div>

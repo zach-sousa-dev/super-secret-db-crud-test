@@ -1,13 +1,12 @@
 :root {
-    --main-background-color: white;
-    --main-form-color: rgb(206, 206, 206);
+    --main-background-color: rgb(248, 243, 232);
+    --main-form-color: rgb(201, 201, 201);
     --bg-logo:  url("../../assets/images/logo_bg.svg");
-    --form-width: 415px;
     --nav-item-color: white;
     --nav-color: rgb(59, 59, 59);
-    --nav-item-font-size: 3rem;
     --nav-border-color: rgb(41, 41, 41);
     --main-font-color: black;
     --item-header-bg-color: rgb(255, 255, 255);
     --item-details-bg-color: rgb(149, 149, 149);
+    --inactive-text-color: rgb(51, 51, 51);
 }

@@ -1,5 +1,8 @@
 :root {
     --item-header-size: 2rem;
+    --item-param-size: 1rem;
+    --form-width: 415px;
+    --nav-item-font-size: 3rem;
 }
 
 body {
@@ -76,7 +79,7 @@ body {
     margin: 0px 0px 40px 0px;
 }
 
-.item-name, .item-param {
+.item-name {
     width: 100%;
     /*border-bottom: 2px solid var(--main-font-color);*/
     font-size: var(--item-header-size);
@@ -84,21 +87,65 @@ body {
 }
 
 .item-param {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    font-size: var(--item-header-size);
+    background-color: var(--item-header-bg-color);
 }
 
-.item-param input[type=text], .item-param input[type=text]:focus {
+/**CUSTOM TEXT FIELDS**/
+/**the box**/
+.item-param-input,  .item-param-input-tall{
     background-color: var(--item-details-bg-color);
     border: none;
+    color: var(--main-font-color);
+    flex: 1;
+    font-size: var(--item-param-size);
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
+
+.item-param-input {
+    white-space: nowrap;
+    overflow-x: hidden;
+    max-width: 50%;
+}
+
+.item-param-input-tall {
+    height: 100px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
+    align-items: start;
+    white-space: normal;
+    overflow-y: auto;
+    word-break: break-word;
+}
+
+/**when the box is not selected and is empty**/
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-text);
+    color: var(--inactive-text-color);
+    font-style: italic;
+}
+/**END CUSTOM TEXT FIELDS**/
 
 .item-details {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--item-details-bg-color);
+}
+
+.flex-col {
+    flex-direction: row;
+}
+
+.no-flex {
+    display: block;
 }
 
 #page-controller-container {
@@ -122,4 +169,8 @@ body {
 
 #page-controller-container a span {
     font-size: var(--nav-item-font-size);
+}
+
+input[type=checkbox] {
+    width: 50%;
 }

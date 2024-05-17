@@ -2,7 +2,6 @@ var firstId;    //these will be init on page load
 var lastId;
 
 window.addEventListener("load", (event)=>{
-    console.log("loaded");
     getItems("fwd", 0, document.querySelector("#items-per-page-dropdown").value);
 });
 
