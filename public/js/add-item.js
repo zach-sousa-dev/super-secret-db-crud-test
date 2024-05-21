@@ -1,14 +1,3 @@
-console.log(JSON.stringify( { 
-    //it is required that the variable names here are the same as the db
-    name: document.querySelector("#item-name").innerHTML.trim(),
-    quantity: document.querySelector("#item-qty").innerHTML.trim(),
-    min_qty: document.querySelector("#item-notice-qty").innerHTML.trim(),
-    unit: document.querySelector("#item-unit").innerHTML.trim(),
-    value: document.querySelector("#item-value").innerHTML.trim(),
-    available: document.querySelector("#item-value").checked,
-    notes: document.querySelector("#item-notes").innerHTML.trim()
-}));
-
 function submitItem() {
     fetch("../private/php/add-item.php", {
         method: "POST",
@@ -16,31 +5,17 @@ function submitItem() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify( { 
-            //it is required that the variable names here are the same as the db
-            name: document.querySelector("#item-name").innerHTML.trim(),
-            quantity: document.querySelector("#item-qty").innerHTML.trim(),
-            min_qty: document.querySelector("#item-notice-qty").innerHTML.trim(),
-            unit: document.querySelector("#item-unit").innerHTML.trim(),
-            value: document.querySelector("#item-value").innerHTML.trim(),
-            available: document.querySelector("#item-value").checked,
-            notes: document.querySelector("#item-notes").innerHTML.trim()
+            // NOTE: it is required that the variable names here are the same as in the db
+            name: document.querySelector("#item-name").innerText.trim(),
+            quantity: document.querySelector("#item-qty").innerText.trim(),
+            min_qty: document.querySelector("#item-notice-qty").innerText.trim(),
+            unit: document.querySelector("#item-unit").innerText.trim(),
+            value: document.querySelector("#item-value").innerText.trim(),
+            available: (document.querySelector("#item-available").checked ? "1" : "0"),
+            notes: document.querySelector("#item-notes").innerText.trim()
         })
     }).then((response)=>response.json())
     .then((response)=>{
-        console.log(response);
+        //console.log(response);
     });
-
-}
-
-function generateJSON() {
-    json = {
-        name: document.querySelector("#item-name").innerHTML.trim(),
-        quantity: document.querySelector("#item-qty").innerHTML.trim(),
-        min_qty: document.querySelector("#item-notice-qty").innerHTML.trim(),
-        unit: document.querySelector("#item-unit").innerHTML.trim(),
-        value: document.querySelector("#item-value").innerHTML.trim(),
-        available: document.querySelector("#item-value").checked,
-        notes: document.querySelector("#item-notes").innerHTML.trim()
-    };
-    return json;
 }
