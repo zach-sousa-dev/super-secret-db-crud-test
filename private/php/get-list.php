@@ -24,7 +24,7 @@ $input["id"] = filter_var($input["id"], FILTER_SANITIZE_NUMBER_INT);
 if($input["dir"] == "fwd") {
     $sql = "SELECT * FROM items WHERE id > :identifier LIMIT :qty";     //used for going next
 } else if($input["dir"] == "bwd") {
-    $sql = "SELECT * FROM items WHERE id < :identifier LIMIT :qty";     //used for going back
+    $sql = "SELECT * FROM items WHERE id < :identifier ORDER BY id DESC LIMIT :qty";     //used for going back
 } else {
     $sql = "SELECT * FROM items WHERE id >= :identifier LIMIT :qty";    //reloading
 }
