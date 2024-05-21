@@ -22,9 +22,9 @@ foreach($input as $key => $value) {
     }
 
     if(empty($values)) {
-        $values .= $value;
+        $values .= "'" . (empty($value) ? "NULL" : $value) . "'";
     } else {
-        $values .= (", ".$values);
+        $values .= (", '" . (empty($value) ? "NULL" : $value) . "'");
     }
 }
 $sql = "INSERT INTO items (" . $columns . ") VALUES (" . $values . ");";
