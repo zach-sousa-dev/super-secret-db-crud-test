@@ -1,3 +1,5 @@
+//get all of the data on the page and send it to the PHP
+//NOTE: I currently don't have any checking to see if parameters are empty.
 function submitItem() {
     fetch("../private/php/add-item.php", {
         method: "POST",
