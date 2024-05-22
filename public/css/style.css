@@ -178,3 +178,7 @@ body {
 input[type=checkbox] {
     width: 50%;
 }
+
+.hidden {
+    display: none;
+}
