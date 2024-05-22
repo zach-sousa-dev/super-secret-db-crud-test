@@ -35,7 +35,8 @@ function getItems(dir, id, qty) {
             itemsContainer.innerHTML = "";
             console.log(response);
             response.items.forEach(element => {
-                itemsContainer.innerHTML += ("<div class='item'><div class='item-name'>" + element.name + "</div><div class='item-details'><div class='item-qty'>QTY: " + element.quantity + "</div><div class='item-availability'>" + (element.available ? "AVAILABLE" : "UNAVAILABLE") + "</div></div></div>");
+                //each item has a data-item-id which stores the actual item id
+                itemsContainer.innerHTML += ("<div class='item' data-item-id><div class='item-name'>" + element.name + "</div><div class='item-details'><div class='item-qty'>QTY: " + element.quantity + "</div><div class='item-availability'>" + (element.available ? "AVAILABLE" : "UNAVAILABLE") + "</div></div></div>");
             });
             firstId = response.firstId;
             lastId = response.lastId;

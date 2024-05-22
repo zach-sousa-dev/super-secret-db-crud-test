@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Create Item</title>
+
+        <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+        <link id="css" href="./css/darkstyle.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--Google Icons-->
+        
+        <script defer src="./js/toggle-theme.js"></script>
+        <script defer src="./js/not-implemented.js"></script>
+        <script defer src="./js/text-field-anti-format.js"></script>
+        <script defer src="./js/add-item.js"></script>
+
+        <link rel="shortcut icon" href="../assets/images/logoIcon.svg" type="image/x-icon">
+    </head>
+    <body>
+        <div id="background">
+        </div>
+
+        <div id="container">
+            <a id="top"></a>
+
+            <nav id="main-nav" class="no-select">
+                <a class="pointer" title="Add a new item to the inventory." href="./create.html">
+                    <span class="material-symbols-outlined">post_add</span>
+                </a>
+                <a class="pointer" title="View your company inventory." href="./list.html">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                </a>
+                <a class="pointer" title="Toggle the page theme.">
+                    <span class="material-symbols-outlined" onclick="toggleTheme()">contrast</span>
+                </a>
+                <a class="not-implemented pointer" title="Your account.">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </a>
+            </nav>
+
+            
+            <div id="item-param-container">
+
+                <!--Name-->
+                <div class="item-param">
+                    <div class="item-param-name">
+                        <span class="material-symbols-outlined">info</span> Name:
+                    </div>
+
+                    <div class="item-param-input pointer" id="item-name" contenteditable="false" data-text="Type a name here..."></div>
+                </div>
+
+                <!--Quantity-->
+                <div class="item-param">
+                    <div class="item-param-name no-select">
+                        <span class="material-symbols-outlined">info</span> Quantity:
+                    </div>
+
+                    <div class="item-param-input pointer" id="item-qty" contenteditable="false" data-text="Type a number here..."></div>
+                </div>
+
+                <!--Notice Quantity-->
+                <div class="item-param">
+                    <div class="item-param-name no-select">
+                        <span class="material-symbols-outlined">info</span> Notice quantity:
+                    </div>
+
+                    <div class="item-param-input pointer" id="item-notice-qty" contenteditable="false" data-text="Type a number here..."></div>
+                </div>
+
+                <!--Unit-->
+                <div class="item-param">
+                    <div class="item-param-name no-select">
+                        <span class="material-symbols-outlined">info</span> Unit:
+                    </div>
+
+                    <div class="item-param-input pointer" id="item-unit" contenteditable="false" data-text="Type a unit here..."></div>
+                </div>
+
+                <!--Value-->
+                <div class="item-param">
+                    <div class="item-param-name no-select">
+                        <span class="material-symbols-outlined">info</span> Dollar value:
+                    </div>
+
+                    <div class="item-param-input pointer" id="item-value" contenteditable="false" data-text="Type a number here..."></div>
+                </div>
+
+                <!--Available-->
+                <div class="item-param">
+                    <div class="item-param-name no-select">
+                        <span class="material-symbols-outlined">info</span> Available:
+                    </div>
+
+                    <input type="checkbox" id="item-available" name="available" />
+                </div>
+
+                <!--Notes-->
+                <div class="item-param no-flex">
+                    <div class="item-param-name no-select">
+                        <span class="material-symbols-outlined">info</span> Notes:
+                    </div>
+
+                    <div class="item-param-input-tall pointer" id="item-notes" contenteditable="false" data-text="Type notes here..."></div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
