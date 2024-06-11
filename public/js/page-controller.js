@@ -35,8 +35,17 @@ function getItems(dir, id, qty) {
             itemsContainer.innerHTML = "";
             console.log(response);
             response.items.forEach(element => {
-                //each item has a data-item-id which stores the actual item id
-                itemsContainer.innerHTML += ("<div class='item' data-item-id><div class='item-name'>" + element.name + "</div><div class='item-details'><div class='item-qty'>QTY: " + element.quantity + "</div><div class='item-availability'>" + (element.available ? "AVAILABLE" : "UNAVAILABLE") + "</div></div></div>");
+
+                parentDiv = document.createElement("div");
+                parentDiv.classList.add("item");
+                parentDiv.classList.add("pointer");
+                parentDiv.addEventListener("click", function(event) {
+                    window.location.href = "../public/create.html?id="+element.id;
+                });
+
+                parentDiv.innerHTML += ("<div class='item-name'>" + element.name + "</div><div class='item-details'><div class='item-qty'>QTY: " + element.quantity + "</div><div class='item-availability'>" + (element.available ? "AVAILABLE" : "UNAVAILABLE") + "</div></div>");
+                itemsContainer.appendChild(parentDiv);
+            
             });
             firstId = response.firstId;
             lastId = response.lastId;

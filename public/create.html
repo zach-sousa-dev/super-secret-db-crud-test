@@ -14,6 +14,7 @@
         <script defer src="./js/not-implemented.js"></script>
         <script defer src="./js/text-field-anti-format.js"></script>
         <script defer src="./js/add-item.js"></script>
+        <script defer src="./js/load-item.js"></script>
 
         <link rel="shortcut icon" href="../assets/images/logoIcon.svg" type="image/x-icon">
     </head>
@@ -39,85 +40,95 @@
                 </a>
             </nav>
 
+            <form method="post" name="form" id="form">
             
-            <div id="item-param-container">
+                <div id="item-param-container">
+                    
+                    
+                    <!--Name-->
+                    <div class="item-param">
+                        <div class="item-param-name">
+                            <span class="material-symbols-outlined">info</span> Name:
+                        </div>
 
-                <!--Name-->
-                <div class="item-param">
-                    <div class="item-param-name">
-                        <span class="material-symbols-outlined">info</span> Name:
+                        <!--<div class="item-param-input pointer" id="item-name" contenteditable="true" data-text="Type a name here..."></div>-->
+                        <input type="text" name="name" id="item-name" placeholder="Type a name here..." required>
                     </div>
 
-                    <div class="item-param-input pointer" id="item-name" contenteditable="true" data-text="Type a name here..."></div>
-                </div>
+                    <!--Quantity-->
+                    <div class="item-param">
+                        <div class="item-param-name no-select">
+                            <span class="material-symbols-outlined">info</span> Quantity:
+                        </div>
 
-                <!--Quantity-->
-                <div class="item-param">
-                    <div class="item-param-name no-select">
-                        <span class="material-symbols-outlined">info</span> Quantity:
+                        <input type="number" name="quantity" id="item-qty" placeholder="Type a quantity here..." required>
                     </div>
 
-                    <div class="item-param-input pointer" id="item-qty" contenteditable="true" data-text="Type a number here..."></div>
-                </div>
+                    <!--Notice Quantity-->
+                    <div class="item-param">
+                        <div class="item-param-name no-select">
+                            <span class="material-symbols-outlined">info</span> Notice qty:
+                        </div>
 
-                <!--Notice Quantity-->
-                <div class="item-param">
-                    <div class="item-param-name no-select">
-                        <span class="material-symbols-outlined">info</span> Notice quantity:
+                        <input type="number" name="min_qty" id="item-notice-qty" placeholder="Type a quantity here..." required>
                     </div>
 
-                    <div class="item-param-input pointer" id="item-notice-qty" contenteditable="true" data-text="Type a number here..."></div>
-                </div>
+                    <!--Unit-->
+                    <div class="item-param">
+                        <div class="item-param-name no-select">
+                            <span class="material-symbols-outlined">info</span> Unit:
+                        </div>
 
-                <!--Unit-->
-                <div class="item-param">
-                    <div class="item-param-name no-select">
-                        <span class="material-symbols-outlined">info</span> Unit:
+                        <input type="text" name="unit" id="item-unit" placeholder="Type a unit here..." required>
                     </div>
 
-                    <div class="item-param-input pointer" id="item-unit" contenteditable="true" data-text="Type a unit here..."></div>
-                </div>
+                    <!--Value-->
+                    <div class="item-param">
+                        <div class="item-param-name no-select">
+                            <span class="material-symbols-outlined">info</span> Dollar value:
+                        </div>
 
-                <!--Value-->
-                <div class="item-param">
-                    <div class="item-param-name no-select">
-                        <span class="material-symbols-outlined">info</span> Dollar value:
+                        <input type="text" name="value" id="item-value" placeholder="Type a dollar value here..." required>
                     </div>
 
-                    <div class="item-param-input pointer" id="item-value" contenteditable="true" data-text="Type a number here..."></div>
-                </div>
+                    <!--Available-->
+                    <div class="item-param">
+                        <div class="item-param-name no-select">
+                            <span class="material-symbols-outlined">info</span> Available:
+                        </div>
 
-                <!--Available-->
-                <div class="item-param">
-                    <div class="item-param-name no-select">
-                        <span class="material-symbols-outlined">info</span> Available:
+                        <input type="checkbox" id="available" name="available" value="checked">
                     </div>
 
-                    <input type="checkbox" id="item-available" name="available" />
-                </div>
+                    <!--Notes-->
+                    <div class="item-param no-flex">
+                        <div class="item-param-name no-select">
+                            <span class="material-symbols-outlined">info</span> Notes:
+                        </div>
 
-                <!--Notes-->
-                <div class="item-param no-flex">
-                    <div class="item-param-name no-select">
-                        <span class="material-symbols-outlined">info</span> Notes:
+                        
+                        <textarea name="notes" id="item-notes" placeholder="Type any notes here..."></textarea>
                     </div>
 
-                    <div class="item-param-input-tall pointer" id="item-notes" contenteditable="true" data-text="Type notes here..."></div>
                 </div>
 
-            </div>
+                <div id="page-controller-container" class="no-select">
 
+                    <a id="cancel-button" class="pointer" href="list.html" title="Do not create the item and return to the inventory." onclick="backPressed()">
+                        <span class="material-symbols-outlined">cancel</span>
+                    </a>
 
-            <div id="page-controller-container" class="no-select">
-                <a id="cancel-button" class="pointer" href="list.html" title="Do not create the item and return to the inventory." onclick="backPressed()">
-                    <span class="material-symbols-outlined">cancel</span>
-                </a>
+                    <a id="confirm-button-parent" class="pointer" title="Create the item!">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        <input id="confirm-button" class="pointer" type="submit" value="">
+                        <!--<button id="confirm-button" class="pointer" type="submit">
+                        </button>-->
+                    </a>
 
-                <a id="confirm-button" class="pointer" title="Create the item!" onclick="submitItem()">
-                    <span class="material-symbols-outlined">add_circle</span>
-                </a>
-            </div>
-            
+                </div>
+
+            </form>
+
         </div>
         
     </body>
