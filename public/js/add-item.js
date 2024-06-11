@@ -1,4 +1,4 @@
-function submitItem(data) {
+async function submitItem(data) {
     fetch("../private/php/add-item.php", {
         method: "POST",
         headers: {
@@ -7,7 +7,7 @@ function submitItem(data) {
         body: JSON.stringify(data)
     }).then((response)=>response.json())
     .then((response)=>{
-        //console.log(response);
+        return response;
     });
 }
 
@@ -21,7 +21,7 @@ function getFormData(formEl) {
     return fd;
 }
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", async function(event) {
     event.preventDefault();
     fd = getFormData(form);
 
@@ -38,5 +38,8 @@ form.addEventListener("submit", function(event) {
         data[checkbox.name] = checkbox.checked;
     });
 
-    submitItem(data);
+    submitItem(data).then((res)=>{
+        window.location.href="../public/create.html?id="+res.id;
+    });
+    
 });

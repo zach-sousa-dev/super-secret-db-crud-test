@@ -32,7 +32,12 @@ $sql = "INSERT INTO items (" . $columns . ") VALUES (" . $values . ");";
 $stmt = $pdo->prepare($sql);
 try {
     $stmt->execute();
-    echo json_encode(["error" => false]);
+
+    $sql = "SELECT id FROM items ORDER BY id DESC LIMIT 1";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $newId = $stmt->fetch();
+    echo json_encode(["error" => false, "id" => $newId]);
 } catch(Exception $e) {
     http_response_code(500);
     echo json_encode([

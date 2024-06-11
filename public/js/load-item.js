@@ -17,12 +17,12 @@ if(urlParams.has("id")) {
     .then(res=> {
         inputs = document.querySelectorAll("input, textarea");
         inputs.forEach(element => {
+            element.disabled = true;
             if(res[element.name] != null) {
                 if(element.type == "checkbox") {
                     element.checked = (res[element.name] == 1) ? true : false;
                 }
                 element.value = res[element.name];
-                element.disabled = true;
             }
         });
         console.log(res);

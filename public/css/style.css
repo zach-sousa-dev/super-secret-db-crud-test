@@ -209,6 +209,11 @@ textarea {
     background-color: var(--item-details-bg-color);
 }
 
+select {
+    color: var(--main-font-color);
+    background-color: var(--item-details-bg-color);
+}
+
 .hidden {
     display: none;
 }
