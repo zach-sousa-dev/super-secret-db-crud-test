@@ -55,20 +55,14 @@ submitButton.addEventListener("click", async function(event) {
 
     const checkboxes = form.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
+        console.log("what");
         data[checkbox.name] = checkbox.checked;
+        console.log(checkbox.checked);
     });
 
     console.log("got here");
     let newId = await submitItem(data);
-    console.log(newId);
     window.location.href="../public/create.html?id="+newId;
-
-    if(event.target.id == saveButton.id) {
-        let id = new URLSearchParams(window.location.search).get("id");
-        data["id"] = id;
-        await updateItem(data);
-        window.location.href="../public/create.html?id="+id;
-    }
     
 });
 
@@ -89,6 +83,7 @@ saveButton.addEventListener("click", async function(event) {
         const checkboxes = form.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
             data[checkbox.name] = checkbox.checked;
+            console.log(checkbox.checked);
         });
 
         let id = new URLSearchParams(window.location.search).get("id");
