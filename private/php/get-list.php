@@ -11,7 +11,7 @@ require("./dbconn.php");
  * the previous page had an ID of 10 and I press next, I should only see items 
  * with ID greater than 10
  * 
- * This will probably suck to update when I implement filters
+ * This will probably suck to update when I implement filters :`)
  */
 
 //input
@@ -53,8 +53,20 @@ if(isset($input["qty"])) {
         $lastId = $row["id"];       //update the last id for each item because it is possible that there are less available items than the qty
     }
 
-    if(!empty($arr)) {
-        $output = ["firstId" => $firstId, "lastId" => $lastId, "items" => $arr, "error" => false];  //only build the output array if items are retrieved
+    $sql = "SELECT COUNT(*) FROM items;";
+    $stmt= $pdo->prepare($sql);
+    $stmt->execute();
+    $count = $stmt->fetch(PDO::FETCH_ASSOC)["COUNT(*)"];
+
+    if ($input["dir"] == "bwd") {
+        $arr = array_reverse($arr); // reverse the array if backwards
+        $temp = $lastId;
+        $lastId = $firstId;
+        $firstId = $temp;
+    }
+
+    if(!empty($arr) && !(count($arr) < $input["qty"] && $input["dir"] == "bwd")) {
+        $output = ["firstId" => $firstId, "lastId" => $lastId, "items" => $arr, "count" => $count,"error" => false];  //only build the output array if items are retrieved and if there are a sufficient number of items going backwards
     }
 }
 

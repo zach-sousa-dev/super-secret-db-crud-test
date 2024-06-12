@@ -36,8 +36,8 @@ try {
     $sql = "SELECT id FROM items ORDER BY id DESC LIMIT 1";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-    $newId = $stmt->fetch();
-    echo json_encode(["error" => false, "id" => $newId]);
+    $newId = $stmt->fetch(PDO::FETCH_ASSOC);
+    echo json_encode(["error" => false, "id" => $newId["id"]]);
 } catch(Exception $e) {
     http_response_code(500);
     echo json_encode([

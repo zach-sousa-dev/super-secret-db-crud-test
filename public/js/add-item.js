@@ -1,27 +1,47 @@
 async function submitItem(data) {
-    fetch("../private/php/add-item.php", {
+    const res = await fetch("../private/php/add-item.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
-    }).then((response)=>response.json())
+    })
+    .then((response)=>response.json())
     .then((response)=>{
-        return response;
+        return response.id;
     });
+
+    return res;
+}
+
+async function updateItem(data) {
+    const res = await fetch("../private/php/update-item.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then((response)=>response.json())
+    .then((response)=>{
+        return response.id;
+    });
+
+    return res;
 }
 
 const submitButton = document.querySelector("#confirm-button");
+const saveButton = document.querySelector("#save-button");
 
 const form = document.querySelector("form");
 
 function getFormData(formEl) {
-    fd = new FormData(formEl);
-    console.log(...fd);
+    const fd = new FormData(formEl);
     return fd;
 }
 
-form.addEventListener("submit", async function(event) {
+submitButton.addEventListener("click", async function(event) {
+    
     event.preventDefault();
     fd = getFormData(form);
 
@@ -38,8 +58,43 @@ form.addEventListener("submit", async function(event) {
         data[checkbox.name] = checkbox.checked;
     });
 
-    submitItem(data).then((res)=>{
-        window.location.href="../public/create.html?id="+res.id;
-    });
+    console.log("got here");
+    let newId = await submitItem(data);
+    console.log(newId);
+    window.location.href="../public/create.html?id="+newId;
+
+    if(event.target.id == saveButton.id) {
+        let id = new URLSearchParams(window.location.search).get("id");
+        data["id"] = id;
+        await updateItem(data);
+        window.location.href="../public/create.html?id="+id;
+    }
+    
+});
+
+saveButton.addEventListener("click", async function(event) {
+    
+    event.preventDefault();
+    if(confirm("Are you sure you wish to overwrite the item's data?")) {
+        fd = getFormData(form);
+
+        let data = {};
+        fd.forEach((value, key) => {
+            const element = document.querySelector(`[name="${key}"]`);
+            if (!(element.type === "checkbox")) {
+                data[key] = value;
+            }
+        });
+
+        const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            data[checkbox.name] = checkbox.checked;
+        });
+
+        let id = new URLSearchParams(window.location.search).get("id");
+        data["id"] = id;
+        await updateItem(data);
+        window.location.href="../public/create.html?id="+id;
+    }
     
 });

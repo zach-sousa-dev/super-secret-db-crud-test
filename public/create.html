@@ -7,14 +7,17 @@
         <title>Create Item</title>
 
         <link href="./css/style.css" rel="stylesheet" type="text/css"/>
-        <link id="css" href="./css/darkstyle.css" rel="stylesheet" type="text/css"/>
+        <link id="css" href="" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--Google Icons-->
         
+        <script defer src="./js/get-url-params.js"></script>
         <script defer src="./js/toggle-theme.js"></script>
         <script defer src="./js/not-implemented.js"></script>
         <script defer src="./js/text-field-anti-format.js"></script>
         <script defer src="./js/add-item.js"></script>
         <script defer src="./js/load-item.js"></script>
+        <script defer src="./js/edit-controls.js"></script>
+        <script defer src="./js/delete-item.js"></script>
 
         <link rel="shortcut icon" href="../assets/images/logoIcon.svg" type="image/x-icon">
     </head>
@@ -48,7 +51,7 @@
                     <!--Name-->
                     <div class="item-param">
                         <div class="item-param-name">
-                            <span class="material-symbols-outlined">info</span> Name:
+                            <span class="material-symbols-outlined">info</span> *Name:
                         </div>
 
                         <!--<div class="item-param-input pointer" id="item-name" contenteditable="true" data-text="Type a name here..."></div>-->
@@ -58,7 +61,7 @@
                     <!--Quantity-->
                     <div class="item-param">
                         <div class="item-param-name no-select">
-                            <span class="material-symbols-outlined">info</span> Quantity:
+                            <span class="material-symbols-outlined">info</span> *Quantity:
                         </div>
 
                         <input type="number" name="quantity" id="item-qty" placeholder="Type a quantity here..." required>
@@ -70,7 +73,7 @@
                             <span class="material-symbols-outlined">info</span> Notice qty:
                         </div>
 
-                        <input type="number" name="min_qty" id="item-notice-qty" placeholder="Type a quantity here..." required>
+                        <input type="number" name="min_qty" id="item-notice-qty" placeholder="Type a quantity here...">
                     </div>
 
                     <!--Unit-->
@@ -79,7 +82,7 @@
                             <span class="material-symbols-outlined">info</span> Unit:
                         </div>
 
-                        <input type="text" name="unit" id="item-unit" placeholder="Type a unit here..." required>
+                        <input type="text" name="unit" id="item-unit" placeholder="Type a unit here...">
                     </div>
 
                     <!--Value-->
@@ -88,7 +91,7 @@
                             <span class="material-symbols-outlined">info</span> Dollar value:
                         </div>
 
-                        <input type="text" name="value" id="item-value" placeholder="Type a dollar value here..." required>
+                        <input type="text" name="value" id="item-value" placeholder="Type a dollar value here...">
                     </div>
 
                     <!--Available-->
@@ -112,15 +115,39 @@
 
                 </div>
 
+
+
                 <div id="page-controller-container" class="no-select">
 
-                    <a id="cancel-button" class="pointer" href="list.html" title="Do not create the item and return to the inventory." onclick="backPressed()">
+                    <a id="cancel-button" class="pointer add-mode" href="list.html" title="Do not create the item and return to the inventory." onclick="backPressed()">
                         <span class="material-symbols-outlined">cancel</span>
                     </a>
 
-                    <a id="confirm-button-parent" class="pointer" title="Create the item!">
+                    <a id="confirm-button-parent" class="pointer add-mode" title="Create the item!">
                         <span class="material-symbols-outlined">add_circle</span>
                         <input id="confirm-button" class="pointer" type="submit" value="">
+                        <!--<button id="confirm-button" class="pointer" type="submit">
+                        </button>-->
+                    </a>
+
+                    <a id="edit-button" class="pointer view-mode" title="Edit the item.">
+                        <span class="material-symbols-outlined">edit</span>
+                    </a>
+
+                    <a id="delete-button-parent" class="pointer edit-mode" title="Permanently delete the item.">
+                        <span class="material-symbols-outlined">delete_forever</span>
+                        <input id="delete-button" class="pointer" type="button">
+                        <!--<button id="confirm-button" class="pointer" type="submit">
+                        </button>-->
+                    </a>
+
+                    <a id="cancel-edit-button" class="pointer edit-mode" title="Stop editing the item and revert the changes.">
+                        <span class="material-symbols-outlined">edit_off</span>
+                    </a>
+
+                    <a id="save-button-parent" class="pointer edit-mode" title="Save the updated item.">
+                        <span class="material-symbols-outlined">save</span>
+                        <input id="save-button" class="pointer" type="button">
                         <!--<button id="confirm-button" class="pointer" type="submit">
                         </button>-->
                     </a>

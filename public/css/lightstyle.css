@@ -2,8 +2,8 @@
     --main-background-color: rgb(248, 243, 232);
     --main-form-color: rgb(201, 201, 201);
     --bg-logo:  url("../../assets/images/logo_bg.svg");
-    --nav-item-color: white;
-    --nav-color: rgb(59, 59, 59);
+    --nav-item-color: black;
+    --nav-color: rgb(230, 230, 230);
     --nav-border-color: rgb(41, 41, 41);
     --main-font-color: black;
     --item-header-bg-color: rgb(255, 255, 255);

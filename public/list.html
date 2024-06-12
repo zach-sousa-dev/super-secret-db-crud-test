@@ -7,7 +7,7 @@
         <title>Inventory</title>
 
         <link href="./css/style.css" rel="stylesheet" type="text/css"/>
-        <link id="css" href="./css/darkstyle.css" rel="stylesheet" type="text/css"/>
+        <link id="css" href="" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--Google Icons-->
         
         <script defer src="./js/toggle-theme.js"></script>
@@ -56,8 +56,9 @@
                     <span class="material-symbols-outlined">arrow_forward_ios</span>
                 </a>
 
-                <select name="items-per-page" id="items-per-page-dropdown" title="Choose how many items appear per page." onchange="reload()">
-                    <option value="3">3 items</option>
+                <span id="page-number">1</span>
+
+                <select name="items-per-page" id="items-per-page-dropdown" title="Choose how many items appear per page.">
                     <option value="5">5 items</option>
                     <option value="10" selected>10 items</option>
                     <option value="20">20 items</option>

@@ -1,24 +1,39 @@
 var firstId;    //these will be init on page load
 var lastId;
+var count = 0;
+
+const itemQuantityDropDown = document.querySelector("#items-per-page-dropdown");
+const pageNumber = document.querySelector("#page-number");
 
 window.addEventListener("load", (event)=>{
-    getItems("fwd", 0, document.querySelector("#items-per-page-dropdown").value);
+    reset();
 });
 
 function nextPressed() {
-    getItems("fwd", lastId, document.querySelector("#items-per-page-dropdown").value);
+    getItems("fwd", lastId, itemQuantityDropDown.value);
 }
 
 function backPressed() {
-    getItems("bwd", firstId, document.querySelector("#items-per-page-dropdown").value);
+    getItems("bwd", firstId, itemQuantityDropDown.value);
 }
 
 function reload() {
-    getItems("fwd-inclusive", firstId, document.querySelector("#items-per-page-dropdown").value);
+    getItems("fwd-inclusive", firstId, itemQuantityDropDown.value);
 }
 
-function getItems(dir, id, qty) {
-    fetch("../private/php/get-list.php", {
+itemQuantityDropDown.addEventListener("change", function(event) {
+    reset();
+}); 
+
+async function reset() {
+    firstId = 0;
+    lastId = 0;
+    count = 0;
+    await getItems("fwd", 0, itemQuantityDropDown.value);
+}
+
+async function getItems(dir, id, qty) {
+    return fetch("../private/php/get-list.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -31,6 +46,14 @@ function getItems(dir, id, qty) {
     }).then((response)=>response.json())
     .then((response)=>{
         if(!response.error) {
+            console.log(dir);
+            if(dir == "fwd") {
+                count ++;
+            } else {
+                count --;
+            }
+            pageNumber.innerText = count + "/" + (Math.ceil(response.count/qty));
+
             itemsContainer = document.querySelector("#items-container");
             itemsContainer.innerHTML = "";
             console.log(response);
