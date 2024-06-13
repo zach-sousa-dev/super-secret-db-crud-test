@@ -14,7 +14,7 @@ function loadPage(id) {
     })
     .then( (response)=> response.json() )
     .then(res=> {
-        inputs = document.querySelectorAll("input, textarea");
+        inputs = document.querySelectorAll("input, textarea, select");
         inputs.forEach(element => {
             element.disabled = true;
             if(res[element.name] != "NULL" && res[element.name] != null) {
