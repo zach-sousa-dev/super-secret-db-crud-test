@@ -15,5 +15,5 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 //disable strict mode
-$stmt = $pdo->prepare("SET sql_mode = 'NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER';");
+$stmt = $pdo->prepare("SET sql_mode = 'NO_ENGINE_SUBSTITUTION';");
 $stmt->execute();
