@@ -10,7 +10,7 @@ let inputs = document.querySelectorAll("input, textarea");
 var isEditing = false;
 
 
-
+//check if we are viewing an item (true) or making an item (false)
 if(new URLSearchParams(window.location.search).has("id")) {
     enterViewMode();
 } else {
@@ -18,7 +18,7 @@ if(new URLSearchParams(window.location.search).has("id")) {
 }
 
 
-
+//add listeners
 editButton.addEventListener("click", function(event) {
     enterEditMode();
 });
@@ -29,17 +29,17 @@ cancelEditButton.addEventListener("click", function(event) {
 });
 
 
-
+//show buttons for creating an item
 function enterAddMode() {
-    addButtons.forEach((element)=>{
+    addButtons.forEach((element)=>{     //show all the adding related buttons
         element.classList.remove("hidden");
     });
 
-    editButtons.forEach((element)=>{
+    editButtons.forEach((element)=>{    //hide all the editing related buttons
         element.classList.add("hidden");
     });
 
-    viewButtons.forEach((element)=>{
+    viewButtons.forEach((element)=>{    //hide all the viewing related buttons
         element.classList.add("hidden");
     });
 
@@ -48,6 +48,7 @@ function enterAddMode() {
     });
 }
 
+//show buttons for viewing an item
 function enterViewMode() {
     addButtons.forEach((element)=>{
         element.classList.add("hidden");
@@ -66,6 +67,7 @@ function enterViewMode() {
     });
 }
 
+//show buttons for editing an item
 function enterEditMode() {
     addButtons.forEach((element)=>{
         element.classList.add("hidden");
